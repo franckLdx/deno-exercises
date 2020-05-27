@@ -1,0 +1,7 @@
+scripts:
+  dev: deno run main.ts
+  bundle:
+    - deno run --allow-read=./dist --allow-write=./dist bundleTools/emptyDir.ts ./dist
+    - deno bundle main.ts ./dist/retry.js
+  start:
+    - deno run ./dist/retry.js
